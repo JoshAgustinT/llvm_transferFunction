@@ -1,7 +1,7 @@
 /*
 Joshua Tlatelpa-Agustin
-11/11/24
-bf transfer function precision test
+9/18/24
+bf language compiler
 written for adv compilers course
 */
 #include <iostream>
@@ -90,6 +90,29 @@ void print_vector_APInts(vector<APInt> list)
         llvm::outs() << "\n";                          // Print newline after each value
     }
 }
+
+/*
+takes an abstract value and returns a set of APInts that are in the concretization set for that abstract value
+ie {[1,5)} returns {1,2,3,4}
+
+can also be disjointed set so {[1,3), [9,11)}  returns {1,2,9,10}
+
+*/
+vector<APInt> concretization_function(vector<string> abstractValues){
+vector<APInt> list;
+//TODO, will also probably change input to vector<ConstantRange>
+return list;
+}
+/*
+ it takes a set of APInts and returns the best abstract value whose concretization set includes the given set.
+ ie {1,2,9,10} returns {[1,3), [9,11)}
+ or  {1,2,3,4} returns {[1,5)}
+*/
+vector<string> abstraction_function(vector<APInt> set){
+vector <string> list;
+//TODO, also will probably swtich return to vector<ConstantRange>
+return list;
+} 
 
 int main()
 {
